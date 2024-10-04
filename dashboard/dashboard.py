@@ -6,15 +6,15 @@ import streamlit as st
 import pandas as pd
 
 # Load data
-cust_df = pd.read_csv("../data/olist_customers_dataset.csv")
-geoloc_df = pd.read_csv("../data/olist_geolocation_dataset.csv")
-order_item_df = pd.read_csv("../data/olist_order_items_dataset.csv")
-order_payment_df = pd.read_csv("../data/olist_order_payments_dataset.csv")
-order_reviews_df = pd.read_csv("../data/olist_order_reviews_dataset.csv")
-orders_df = pd.read_csv("../data/olist_orders_dataset.csv")
-products_df = pd.read_csv("../data/olist_products_dataset.csv")
-sellers_df = pd.read_csv("../data/olist_sellers_dataset.csv")
-translate_df = pd.read_csv("../data/product_category_name_translation.csv")
+cust_df = pd.read_csv("olist_customers_dataset.csv")
+geoloc_df = pd.read_csv("olist_geolocation_dataset.csv")
+order_item_df = pd.read_csv("olist_order_items_dataset.csv")
+order_payment_df = pd.read_csv("olist_order_payments_dataset.csv")
+order_reviews_df = pd.read_csv("olist_order_reviews_dataset.csv")
+orders_df = pd.read_csv("olist_orders_dataset.csv")
+products_df = pd.read_csv("data/olist_products_dataset.csv")
+sellers_df = pd.read_csv("data/olist_sellers_dataset.csv")
+translate_df = pd.read_csv("data/product_category_name_translation.csv")
 
 products_eng_df = pd.merge(products_df, translate_df, on="product_category_name", how="left")
 products_eng_df['product_category_name'] = products_eng_df['product_category_name_english']
