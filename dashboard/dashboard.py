@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 import pandas as pd
-from pathlib import path
+from pathlib import Path
 
 # Menggunakan Path untuk mendefinisikan lokasi folder di atas
 # "data" adalah folder yang berisi dataset di satu level di atas folder script ini
